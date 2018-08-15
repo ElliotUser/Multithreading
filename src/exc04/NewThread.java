@@ -8,7 +8,6 @@ public class NewThread implements Runnable {
         name = threadName;
         thread = new Thread(this,name);
         System.out.println("Новый поток: "+thread);
-        thread.start();
     }
 
     @Override

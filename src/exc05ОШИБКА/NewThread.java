@@ -1,17 +1,15 @@
-package exc05;
+package exc05ОШИБКА;
 
 public class NewThread implements Runnable {
-    private String name;
-    private Thread thread;
+    String name;
+    Thread t;
 
     public NewThread(String threadName){
         name = threadName;
-        thread = new Thread(this,name);
-        System.out.println("Новый поток: "+thread);
-        thread.start();
+        t = new Thread(this,name);
+        System.out.println("Новый поток: "+t);
     }
 
-    @Override
     public void run() {
         try {
             for(int i = 5; i > 0; i--) {
@@ -24,11 +22,4 @@ public class NewThread implements Runnable {
         System.out.println(name+" завершен.");
     }
 
-    public Thread getThread(){
-        return thread;
-    }
-
-    public String getName() {
-        return name;
-    }
 }

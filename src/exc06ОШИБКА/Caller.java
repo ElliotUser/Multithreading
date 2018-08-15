@@ -1,4 +1,4 @@
-package exc06;
+package exc06ОШИБКА;
 
 public class Caller implements Runnable {
      String msg;
@@ -9,13 +9,12 @@ public class Caller implements Runnable {
         target = targ;
         msg = s;
         thread = new Thread(this);
-        thread.start();
     }
 
     @Override
     public void run() {
-        synchronized(target) {
-            target.call(msg);
+        synchronized(target){
+        target.call(msg);
         }
     }
 
